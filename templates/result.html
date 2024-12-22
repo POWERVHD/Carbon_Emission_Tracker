@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Tracker - Results</title>
+    <link rel="stylesheet" href="/static/result.css">
+
+    <script>
+        setTimeout(function() {
+            window.location.reload();
+        }, 10000); 
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Carbon Footprint</h1>
+        </header>
+        <main>
+            
+            <p class="emissions">Total Emissions: <span>{{ total_emissions }}</span> kg CO2</p>
+            
+            <section class="suggestions">
+                <h2>Suggestions</h2>
+                {% if suggestions %}
+                    <ul>
+                        {% for suggestion in suggestions %}
+                            <li>{{ suggestion }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No suggestions available. Keep up the eco-friendly habits!</p>
+                {% endif %}
+            </section>
+
+            <a href="/" class="btn">Go Back</a>
+        </main>
+    </div>
+</body>
+</html>

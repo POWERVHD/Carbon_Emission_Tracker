@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Tracker</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Carbon Emission Tracker</h1>
+        </header>
+        <main>
+            <p>Track your carbon footprint by entering your activity details below:</p>
+            <form action="/calculate" method="POST">
+
+                <div class="form-group">
+                    <label for="electricity">Electricity Usage (kWh):</label>
+                    <input type="number" id="electricity" name="electricity" placeholder="Enter electricity usage (e.g., 100)" step="0.01" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="car">Car Travel (km):</label>
+                    <input type="number" id="car" name="car" placeholder="Enter car travel distance (e.g., 50)" step="0.01" min="0">
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="bus">Bus Travel (km):</label>
+                    <input type="number" id="bus" name="bus" placeholder="Enter bus travel distance (e.g., 20)" step="0.01" min="0">
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="train">Train Travel (km):</label>
+                    <input type="number" id="train" name="train" placeholder="Enter train travel distance (e.g., 15)" step="0.01" min="0">
+                </div>
+
+            
+                <div class="form-group">
+                    <label for="flight">Flight Travel (km):</label>
+                    <input type="number" id="flight" name="flight" placeholder="Enter flight travel distance (e.g., 300)" step="0.01" min="0">
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="deforestation">Number of Trees Cut Down:</label>
+                    <input type="number" id="deforestation" name="deforestation" placeholder="Enter number of trees cut (e.g., 2)" step="1" min="0">
+                </div>
+
+                
+                <button type="submit" class="btn">Calculate Emissions</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
