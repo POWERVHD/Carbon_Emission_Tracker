@@ -1,3 +1,5 @@
+About
+
 🔧 Technology Stack:
 Hardware: Arduino, MQ135, DHT11, NEO-6M GPS, and GY-521.
 Software: Arduino IDE, Flask (web app), Python (data processing), CallMeBot API (alerts).
